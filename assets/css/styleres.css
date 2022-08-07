@@ -1,32 +1,95 @@
-@media only screen and (max-width:700px) {
+
+@media only screen and (max-width:1000px) {
 
     .container {
-        width: 650px;
+        max-width: 1000px;
         margin: 0% auto;
 
     }
-    input{
+
+    input {
+        width: 170px;
+    }
+
+   
+.header{
+    width:650px;
+}
+    .colBack {
+        background: url(../img/rotate.jpg);
+       max-width: 1000px;
+        height: 670px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .shadowBack {
+        background-color: rgba(0, 0, 0, 0.315);
+    max-width: 1000px;
+        height: 670px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+    }
+
+    .col2 {
+        width: 600px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:700px) {
+
+    .container {
+        max-width: 650px;
+        margin: 0% auto;
+
+    }
+
+    input {
         width: 150px;
     }
 
+   
+.header{
+    max-width: 550px;
+}
     .colBack {
         background: url(../img/rotate.jpg);
-        width: 650px;
+        max-width: 650px;
+        margin: auto;
         height: 670px;
         background-size: cover;
         background-repeat: no-repeat;
 
     }
-    .shadowBack{
+
+    .shadowBack {
+        margin: auto;
         background-color: rgba(0, 0, 0, 0.315);
-        width: 650px;
+       max-width: 650px;
         height: 670px;
         background-size: cover;
         background-repeat: no-repeat;
-        
-    
+
+
     }
+
     .col2 {
-        width: 500px;
+       max-width: 500px;
+       margin: auto;
     }
 }
+
+
+
+

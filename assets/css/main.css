@@ -1,1 +1,129 @@
 /*css*/
+@font-face {
+    font-family: ir;
+    src: url(../font/IrishGrover.ttf);
+}
+
+body {
+    font-family: ir;
+    margin: 0%;
+}
+
+label {
+    margin: 1% 6%;
+    color: black;
+    font-size: large;
+}
+
+input {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.397), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+    width: 200px;
+    height: 25px;
+    border: none;
+    margin: 1% 6%;
+    color: aliceblue;
+    background: -webkit-linear-gradient(0deg, #ffffff69, #bb7b7ba9);
+    border-radius: 5px;
+}
+
+/*back desgin*/
+
+
+.container {
+    width: 1000px;
+    margin: 0% auto;
+
+}
+
+.col {
+    width: auto;
+    background-color: rgba(71, 49, 19, 0.301);
+}
+
+.colBack {
+    
+    background: url(../img/Tips.jpg);
+    width: 1000px;
+    height: 670px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+
+.shadowBack{
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 1000px;
+    height: 670px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+/*head set */
+.header {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.header>span>p {
+    margin: 0% 5%;
+    padding: 0.5%;
+
+}
+
+/* my budget */
+.col2 {
+    direction: rtl;
+    background-color: rgba(54, 54, 54, 0.397);
+    width: 800px;
+    margin:0 auto;
+}
+
+.myBudget {
+    display: flex;
+    flex-direction: column;
+}
+
+.saveBudget {
+    width: 60px;
+}
+
+/*buttons*/
+
+/*set input*/
+#but input {
+    width: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+#number {
+    width: 40px;
+}
+
+
+
+
+.info {
+    padding-top: 7%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+#hov:hover{
+box-shadow:inset 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

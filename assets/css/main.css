@@ -5,12 +5,14 @@
   font-weight: 400;
   src: url("../font/iranyekanweblight.woff") format("woff");
 }
+
 @font-face {
   font-family: "IranYekanWeb";
   font-style: normal;
   font-weight: 500;
   src: url("../font/iranyekanwebregular.woff") format("woff");
 }
+
 @font-face {
   font-family: "IranYekanWeb";
   font-style: normal;
@@ -57,9 +59,59 @@ html {
   text-align: center;
 }
 
-#input-form > * {
+#input-form>* {
   font-size: 16px;
 }
+
+/*set input expense & income */
+
+#input-form div:first-of-type input{
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 1px 5px 16px 0px #585a5886;
+  border-radius: 20px;
+}
+#input-form div:first-of-type input:hover{
+  box-shadow:inset 1px 5px 6px 0px #585a5831;
+}
+#input-form div:first-of-type{
+  display: flex;
+  justify-content: space-around;
+  
+}
+#input-form div{
+  margin: 3%;
+}
+/*income */
+#input-form div:nth-of-type(2) input:last-of-type{
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 1px 5px 16px 0px #585a5886;
+  border-radius: 20px;
+}
+#input-form div:nth-of-type(2) input:hover{
+  box-shadow:inset 1px 5px 6px 0px #585a5831;
+}
+
+/*expense*/
+#input-form div:last-of-type input:last-of-type{
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 1px 5px 16px 0px #585a5886;
+  border-radius: 20px;
+}
+#input-form div:nth-of-type(2) input:hover{
+  box-shadow:inset 1px 5px 6px 0px #585a5831;
+}
+
+
+
+
+
+
 
 #input-form input,
 #input-form select {
@@ -74,8 +126,8 @@ html {
 }
 
 #input-form input {
-  border-right: none;
   padding: 10px;
+  margin: 1%;
 }
 
 #input-form input[type="submit"] {
@@ -86,6 +138,8 @@ html {
   cursor: pointer;
 }
 
+
+
 #budget-div {
   text-align: center;
 }
@@ -95,7 +149,7 @@ html {
   justify-content: space-between;
 }
 
-#history-div > div {
+#history-div>div {
   background-color: rgb(250, 250, 250);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -121,8 +175,8 @@ html {
 
 
 
-#expense-history > div,
-#income-history > div {
+#expense-history>div,
+#income-history>div {
   height: 40px;
   background-color: rgb(252, 252, 252);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -133,12 +187,13 @@ html {
   align-items: center;
 }
 
-#expense-history> div >span{
-width: 100%;
+#expense-history>div>span {
+  width: 100%;
   margin: 10px;
   border-left: 1px solid rgba(73, 73, 73, 0.233);
-  padding: 6px  10px;
+  padding: 6px 10px;
 }
+
 #delete {
   font-size: 50px;
   color: red;

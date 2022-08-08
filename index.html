@@ -16,23 +16,23 @@
 
   <div class="container">
     <div id="transaction-type-div">
-      <button class="active">فرم خرج</button>
-      <button>فرم درآمد</button>
+      <button id="expense-btn">فرم خرج</button>
+      <button id="income-btn">فرم دارایی</button>
     </div>
 
     <div class="seperator"></div>
 
     <div id="input-div">      
-      <form action="#" id="expense-form">
+      <form action="#" id="expense-form" class="hidden">
           <input type="text" name="transaction-name" id="transaction-name" placeholder="عنوان" />
-          <input type="text" name="transaction-amount" id="price-amount" placeholder="قیمت" />
+          <input type="number" name="transaction-price" id="transaction-price" placeholder="قیمت" />
           <input type="number" name="transaction-amount" id="transaction-amount" min="1"
             placeholder="تعداد (پیش فرض 1)" />
           <input type="submit" id="submit-btn" value="ثبت" />
       </form>
 
       <form action="#" id="income-form" class="hidden">
-        <input type="text" name="transaction-amount" id="transaction-amount" placeholder="موجودی">
+        <input type="number" name="transaction-amount" id="transaction-amount" placeholder="موجودی">
         <input type="submit" id="submit-btn" value="ثبت">
       </form>
     </div>
@@ -42,10 +42,7 @@
 
     <div id="budget-div">
       <p>بودجه باقی مانده</p>
-      <h2>
-        <span>1000</span>
-        <span>تومان</span>
-      </h2>
+      <h2 id="current-budget"></h2>
     </div>
 
     <hr />
@@ -57,16 +54,7 @@
           <h2>خرج</h2>
           <hr />
         </div>
-        <div id="expense-history">
-          <div>
-            <span>پیتزا</span>
-            <span>تعداد 1</span>
-            <span>1000 تومان</span>
-            <div>
-              <span id="remove-btn">-</span>
-            </div>
-          </div>
-        </div>
+        <div id="expense-history"></div>
       </div>
       <div id="income-div">
         <div class="title">

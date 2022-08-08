@@ -87,6 +87,20 @@ body {
   font-size: 16px;
 }
 
+/* hide number arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* hide number arrows */
+
 #input-div > form > input {
   outline: none;
   border: dashed 1px rgba(0, 0, 0, 0.5);
@@ -128,7 +142,9 @@ body {
   min-width: 40%;
   padding: 10px 20px;
   text-align: center;
-  min-height: 400px;
+  text-align: center;
+  overflow: auto;
+  height: 400px;
 }
 
 #history-div .title {
@@ -137,11 +153,6 @@ body {
 
 #history-div h2 {
   margin: 0;
-}
-
-#expense-history,
-#income-history {
-  text-align: right;
 }
 
 #expense-history > div,
@@ -164,7 +175,7 @@ body {
 }
 
 #remove-btn {
-  font-size: 50px;
+  font-size: 30px;
   color: red;
   font-weight: bolder;
   text-align: left;

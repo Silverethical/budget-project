@@ -1,65 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>budget project</title>
-        <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/styleres.css">
-</head>
-<body>
-     <div class="col">
-        <div class="container">
-            <div class="colBack">
-                <div class="shadowBack">
-                    <!--header-->
-                    <div class="header">
-                        <span>
-                            <p>budget</p>
-                            <p> planer</p>
-                        </span>
-                    </div>
-                    <!--budget-->
-                    <form class="col2">
-                        <!--asset-->
-                        <div class="myBudget">
-                            <label for="budget">موجودی خود را وارد کنید:</label>
-                            <input type="text" id="budget">
-                            <input id="hov" type="submit" value="save" class="saveBudget">
-                        </div>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>budget tracker</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/styleres.css" />
+  </head>
+  <body>
+    <div class="seperator"></div>
+    <div class="seperator"></div>
 
-                        <!-- buttons -->
+    <div class="container">
+      <div id="input-div">
+        <form id="input-form" action="#">
+          <select name="transaction-type" id="transaction-type">
+            <option value="expense">خرج</option>
+            <option value="income">درآمد</option>
+          </select>
 
-                        <div id="but">
-                            <input type="submit" id="hov" value="">
-                            <input type="submit" id="hov" value="">
-                            <input type="submit" id="hov" value="">
-                            <input type="submit" id="hov" value="">
-                        </div>
+          <input
+            type="text"
+            name="transaction-name"
+            id="transaction-name"
+            placeholder="عنوان"
+          />
+          <input
+            type="number"
+            name="transaction-amount"
+            id="transaction-amount"
+            min="1"
+            placeholder="تعداد (پیش فرض 1)"
+          />
+          <input type="submit" id="submit-btn" value="ثبت" />
+        </form>
+      </div>
 
-                        <!--Costs-->
-                        <div class="info">
-                            <div>
-                                <label for="title"> عنوان </label>
-                                <input type="text" id="title">
-                            </div>
-                            <div>
-                                <label for="title"> قیمت</label>
-                                <input type="text" id="price">
-                            </div>
-                            <div>
-                                <label for="title"> تعداد</label>
-                                <input type="number" id="number">
-                            </div>
-                        </div>
-                    </form>
+      <div class="seperator"></div>
+      <hr />
 
+      <div id="budget-div">
+        <p>بودجه باقی مانده</p>
+        <h2>
+          <span>1000</span>
+          <span>تومان</span>
+        </h2>
+      </div>
 
-                </div>
+      <hr />
+      <div class="seperator"></div>
+
+      <div id="history-div">
+        <div id="expense-div">
+          <div class="title">
+            <h2>خرج</h2>
+            <hr />
+          </div>
+          <div id="expense-history">
+            <div>
+              <span>پیتزا</span>
+              <span>1 عدد</span>
+              <span>1000 تومان</span>
             </div>
-        </div> 
+          </div>
+        </div>
+        <div id="income-div">
+          <div class="title">
+            <h2>درآمد</h2>
+            <hr />
+          </div>
+          <div id="income-history"></div>
+        </div>
+      </div>
     </div>
-    <script src="assets/script/script.js"></script>
-</body>
+
+    <script src="./assets/script/app.js"></script>
+  </body>
 </html>

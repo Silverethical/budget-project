@@ -15,26 +15,25 @@
   <div class="seperator"></div>
 
   <div class="container">
-    <div id="input-div">
-      <form id="input-form" action="#">
-        <div>
-          <input type="submit" value="خرج" id="expense ">
-          <input type="submit" value="دارایی" id="income ">
-        </div>
+    <div id="transaction-type-div">
+      <button class="active">فرم خرج</button>
+      <button>فرم درآمد</button>
+    </div>
 
-        <div>
-          <input type="text" name="type-income" id="price-amount" placeholder="موجودی" />
-          <input type="submit" id="submit-income-btn" value="ثبت" />
-        </div>
+    <div class="seperator"></div>
 
-        <div>
+    <div id="input-div">      
+      <form action="#" id="expense-form">
           <input type="text" name="transaction-name" id="transaction-name" placeholder="عنوان" />
           <input type="text" name="transaction-amount" id="price-amount" placeholder="قیمت" />
           <input type="number" name="transaction-amount" id="transaction-amount" min="1"
             placeholder="تعداد (پیش فرض 1)" />
           <input type="submit" id="submit-btn" value="ثبت" />
-        </div>
+      </form>
 
+      <form action="#" id="income-form" class="hidden">
+        <input type="text" name="transaction-amount" id="transaction-amount" placeholder="موجودی">
+        <input type="submit" id="submit-btn" value="ثبت">
       </form>
     </div>
 
@@ -64,17 +63,17 @@
             <span>تعداد 1</span>
             <span>1000 تومان</span>
             <div>
-              <span id="delete">-</span>
+              <span id="remove-btn">-</span>
             </div>
           </div>
         </div>
-        <div id="income-div">
-          <div class="title">
-            <h2>درآمد</h2>
-            <hr />
-          </div>
-          <div id="income-history"></div>
+      </div>
+      <div id="income-div">
+        <div class="title">
+          <h2>درآمد</h2>
+          <hr />
         </div>
+        <div id="income-history"></div>
       </div>
     </div>
 

@@ -34,9 +34,13 @@ hr {
   display: none !important;
 }
 
-body,
-html {
-  background-color: #0093c8;
+.active {
+  background-color: #007bffc5 !important;
+  color: #fff !important;
+}
+
+body {
+  background-color: #007bff82;
   font-family: "IranYekanWeb", sans-serif;
   font-size: 16px;
 }
@@ -54,91 +58,59 @@ html {
   padding: 50px;
 }
 
-#input-form {
+#transaction-type-div {
+  text-align: center;
   font-size: 0;
+}
+
+#transaction-type-div > button {
+  cursor: pointer;
+  padding: 12px 0;
+  font-size: 20px;
+  background-color: #fff;
+  border-top-left-radius: 100px;
+  border: none;
+  border-top: solid 1px #007bffc5;
+  width: 50%;
+}
+
+#transaction-type-div > button:first-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 100px;
+}
+
+#input-div > form {
   text-align: center;
 }
 
-#input-form>* {
+#input-div > form > * {
   font-size: 16px;
 }
 
-/*set input expense & income */
-
-#input-form div:first-of-type input{
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: black;
-  box-shadow: 1px 5px 16px 0px #585a5886;
-  border-radius: 20px;
-}
-#input-form div:first-of-type input:hover{
-  box-shadow:inset 1px 5px 6px 0px #585a5831;
-}
-#input-form div:first-of-type{
-  display: flex;
-  justify-content: space-around;
-  
-}
-#input-form div{
-  margin: 3%;
-}
-/*income */
-#input-form div:nth-of-type(2) input:last-of-type{
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: black;
-  box-shadow: 1px 5px 16px 0px #585a5886;
-  border-radius: 20px;
-}
-#input-form div:nth-of-type(2) input:hover{
-  box-shadow:inset 1px 5px 6px 0px #585a5831;
-}
-
-/*expense*/
-#input-form div:last-of-type input:last-of-type{
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: black;
-  box-shadow: 1px 5px 16px 0px #585a5886;
-  border-radius: 20px;
-}
-#input-form div:nth-of-type(2) input:hover{
-  box-shadow:inset 1px 5px 6px 0px #585a5831;
-}
-
-
-
-
-
-
-
-#input-form input,
-#input-form select {
+#input-div > form > input {
   outline: none;
-  border: solid 1px;
+  border: dashed 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-#input-form select {
-  padding: 9px 40px;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-}
-
-#input-form input {
+#input-div > form > input {
   padding: 10px;
-  margin: 1%;
+  margin-left: 20px;
 }
 
-#input-form input[type="submit"] {
-  background-color: black;
-  color: #fff;
-  padding: 11px 60px;
-  border-radius: 10px 0 0 10px;
+#input-div > form > input:last-of-type {
+  margin-left: 0;
+}
+
+#input-div > form > input[type="submit"] {
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 60px;
+  border: solid 1px black;
+  border-radius: 10px;
   cursor: pointer;
 }
-
-
 
 #budget-div {
   text-align: center;
@@ -146,14 +118,14 @@ html {
 
 #history-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-#history-div>div {
+#history-div > div {
   background-color: rgb(250, 250, 250);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  min-width: 46%;
+  min-width: 40%;
   padding: 10px 20px;
   text-align: center;
   min-height: 400px;
@@ -172,11 +144,8 @@ html {
   text-align: right;
 }
 
-
-
-
-#expense-history>div,
-#income-history>div {
+#expense-history > div,
+#income-history > div {
   height: 40px;
   background-color: rgb(252, 252, 252);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -187,14 +156,14 @@ html {
   align-items: center;
 }
 
-#expense-history>div>span {
+#expense-history > div > span {
   width: 100%;
   margin: 10px;
   border-left: 1px solid rgba(73, 73, 73, 0.233);
   padding: 6px 10px;
 }
 
-#delete {
+#remove-btn {
   font-size: 50px;
   color: red;
   font-weight: bolder;
@@ -202,4 +171,12 @@ html {
   padding: 3px;
   margin: 0 5px;
   cursor: pointer;
+}
+
+input:hover {
+  box-shadow:inset 1px 5px 6px 0px #585a5831;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 1px 5px 6px 0px #585a5856;
 }

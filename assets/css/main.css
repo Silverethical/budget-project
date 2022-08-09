@@ -63,7 +63,7 @@ body {
   font-size: 0;
 }
 
-#transaction-type-div>button {
+#transaction-type-div > button {
   cursor: pointer;
   padding: 12px 0;
   font-size: 20px;
@@ -74,16 +74,16 @@ body {
   width: 50%;
 }
 
-#transaction-type-div>button:first-of-type {
+#transaction-type-div > button:first-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 100px;
 }
 
-#input-div>form {
+#input-div > form {
   text-align: center;
 }
 
-#input-div>form>* {
+#input-div > form > * {
   font-size: 16px;
   margin: 15px;
 }
@@ -97,29 +97,29 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 /* hide number arrows */
 
-#input-div>form>input {
+#input-div > form > input {
   outline: none;
   border: dashed 1px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
 
-#input-div>form>input {
+#input-div > form > input {
   padding: 10px;
   margin-left: 20px;
 }
 
-#input-div>form>input:last-of-type {
+#input-div > form > input:last-of-type {
   margin-left: 0;
 }
 
-#input-div>form>input[type="submit"] {
+#input-div > form > input[type="submit"] {
   background-color: #ffffff;
   color: black;
   padding: 10px 60px;
@@ -134,19 +134,26 @@ input[type=number] {
 
 #history-div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-#history-div>div {
+#history-div > div {
   background-color: rgb(250, 250, 250);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  min-width: 40%;
   padding: 10px 20px;
   text-align: center;
   text-align: center;
   overflow: auto;
   height: 400px;
+}
+
+#history-div > div:first-of-type {
+  min-width: 70%;
+}
+
+#history-div > div:last-of-type {
+  min-width: 21%;
 }
 
 #history-div .title {
@@ -157,8 +164,8 @@ input[type=number] {
   margin: 0;
 }
 
-#expense-history>div,
-#income-history>div {
+#expense-history > div,
+#income-history > div {
   height: 40px;
   background-color: rgb(252, 252, 252);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -169,7 +176,7 @@ input[type=number] {
   align-items: center;
 }
 
-#expense-history>div>span {
+#expense-history > div > span {
   width: 100%;
   margin: 10px;
   border-left: 1px solid rgba(73, 73, 73, 0.233);
@@ -178,9 +185,7 @@ input[type=number] {
 
 #expense-history {
   margin-top: 5%;
-
 }
-
 
 #remove-btn {
   font-size: 30px;

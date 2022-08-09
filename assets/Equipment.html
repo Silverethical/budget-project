@@ -10,27 +10,74 @@
 </head>
 
 <body>
-    <div class="header">
-        <ul>
-            <li><a href="../index.html"> پلنر بودجه </a></li>
-            <li><a href="Equipment.html"> تجهیزات</a> </li>
-            <li></li>
-        </ul>
+    <div class="container1">
+        <div class="header">
+            <ul>
+                <li><a href="../index.html"> پلنر بودجه </a></li>
+                <li><a href="Equipment.html"> تجهیزات</a> </li>
+                <li></li>
+            </ul>
+        </div>
     </div>
     <div class="seperator"></div>
     <div class="seperator"></div>
     <div class="container">
-       
+
         <div class="col1">
             <div class="typeTravel">
+
+                <div id="transaction-type-div">
+                    <button id="Optional-btn">افزودن تجهیزات </button>
+                    <button id="Suggested-btn">تجهیزات پیشنهادی</button>
+                </div>
                 <form action="" id="typeList">
-                    <input type="text">
-                    <select name="type" id="">
-                        <option value="camping">camping</option>
-                        <option value="camping">desert tour</option>
-                    </select>
+                    <div id="infoTravel">
+                        <div>
+                            <label for="traveltype">انتخاب نوع سفر</label>
+                            <input list="traveltype" name="ttp" id="travel">
+                            <datalist id="traveltype">
+                                <option value="camping">camping</option>
+                                <option value="desert tour">desert tour</option>
+                                <option value="Ecotourism residence">Ecotourism residence</option>
+                            </datalist>
+                        </div>
+                        <div>
+                            <input type="submit" id="save-type">
+                        </div>
+                    </div>
+                    <div class="SuggestedEquipment">
+                        <div class="title">
+                            <h2> تجهیزات پیشنهادی </h2>
+                            <hr />
+                        </div>
+                        <div>
+                            <span>-----<input type="checkbox" id="1" class="box"></input></span>
+                            <span>--------<input type="checkbox" id="1" class="box"></input></span>
+                            <span>-----------<input type="checkbox" id="1" class="box"></input></span>
+                            <span>------------<input type="checkbox" id="1" class="box"></input></span>
+                            <span>----------------<input type="checkbox" id="1" class="box"></input></span>
+                        </div>
+
+                    </div>
 
 
+                    <div class="OptionalEquipment">
+                        <div class="title">
+                            <h2> افزودن تجهیزات</h2>
+                            <hr />
+                        </div>
+
+                        <div id="Optional">
+                            <input type="text" placeholder="  تجهیزات مورد نیاز خود را وارد کنید ... ">
+                            <input type="submit">
+                        </div>
+                        <div>
+                            <span>-----------<input type="checkbox" id="1" class="box"></input></span>
+                            <span>----------<input type="checkbox" id="1" class="box"></input></span>
+                            <span>----------<input type="checkbox" id="1" class="box"></input></span>
+                            <span>---------<input type="checkbox" id="1" class="box"></input></span>
+                            <span>-----------<input type="checkbox" id="1" class="box"></input></span>
+                        </div>
                 </form>
             </div>
         </div>

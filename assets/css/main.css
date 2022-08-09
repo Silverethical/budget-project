@@ -27,7 +27,7 @@ hr {
 }
 
 .seperator {
-  height: 40px;
+  height: 50px;
 }
 
 .hidden {
@@ -49,30 +49,42 @@ body {
 * {
   font-family: inherit;
 }
+
 /*header */
 .header {
-  width: 800px;
+  width: 1400px;
   position: fixed;
   background-color: #fff;
   display: flex;
-  border-radius: 0 0 0 100px;
+  border-radius: 0 0 100px 100px;
   box-shadow: 1px 5px 6px 0px #5f5f5f38;
 }
-.header ul{
-  display: flex ;
+
+.header ul {
+  display: flex;
   flex-direction: row;
 }
-li{
+
+li {
   cursor: pointer;
-  padding:5px 10px;
+  padding: 5px 10px;
   margin: 5px;
 }
-.header *{
+
+.header * {
   text-decoration: none;
   list-style: none;
   color: rgb(42, 46, 46);
-  
+
 }
+
+
+
+.container1 {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
 
 .container {
   margin: 0 auto;
@@ -216,11 +228,11 @@ input[type="number"] {
   cursor: pointer;
 }
 
-#income-history>div>span{
+#income-history>div>span {
   width: 100%;
   padding: 6px 10px;
   border-left: 1px solid rgba(73, 73, 73, 0.233);
-  
+
 }
 
 input:hover {

@@ -1,18 +1,21 @@
-let SuggestedEquipmentArray = [['me'],['uo'],['me '],['yo'],["67"],["56"],["e34"]]
-//var
 
-const clientchoice=document.querySelectorAll('#traveltype')
-const saveType=document.getElementById('save-type')
+//array for suggestion item
+let SuggestedEquipmentArray = [['me'], ['uo'], ['me '], ['yo'], ["67"], ["56"], ["e34"]]
 
 
+//varible
+const clientchoice = document.querySelectorAll('#traveltype')
+const saveType = document.getElementById('save-type')
 
 
-//event
 
-saveType.addEventListener('click',(e)=>{
-    e.preventDefault()
-    suggested(clientchoice)
-    
+
+//eventlistner
+
+saveType.addEventListener('click', (e) => {
+  e.preventDefault()
+  suggested(clientchoice)
+
 })
 
 
@@ -27,8 +30,8 @@ saveType.addEventListener('click',(e)=>{
 
 
 //function
- function suggested(typetavel){
- console.log(typetavel)
- 
-   
- }
+function suggested(typetavel) {
+  console.log(typetavel)
+
+
+}

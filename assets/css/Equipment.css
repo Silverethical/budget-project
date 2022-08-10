@@ -106,6 +106,20 @@ input {
 
 }
 
+select {
+    border: 1px dashed #1616165d;
+    width: 200px;
+    height: 40px;
+
+}
+
+option {
+    border: 1px dashed #1616165d;
+    font-size: 20px;
+
+
+}
+
 #save-type {
     border: 1px solid #050505;
     border-radius: 10px;
@@ -220,6 +234,13 @@ input[type="submit"]:hover {
 
     #infoTravel div:last-of-type input {
         width: 30%;
+    }
+
+
+
+
+    select {
+        width: 50%;
     }
 
     #Optional {

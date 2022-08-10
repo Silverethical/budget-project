@@ -61,13 +61,18 @@ body {
 
 
 /*header */
-.header {
-    width: 1400px;
+.headcol{
+    width: 100%;
+    background-color: #ffffff;
+    height:70px;
     position: fixed;
-    background-color: #fff;
-    display: flex;
-    border-radius: 0 0 100px 100px;
     box-shadow: 1px 5px 6px 0px #5f5f5f38;
+    
+}
+
+.header {
+    display: flex;
+
 }
 
 .header ul {

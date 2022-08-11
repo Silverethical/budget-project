@@ -19,7 +19,7 @@ let travelType = {
   showInPage: function () {
     const htmlSelectTravelType = document.querySelector("#traveltype"),
       travelList = Object.keys(travelType.list);
-    let listOptions = `<option>---- انتخاب کنید ----</option>`;
+    let listOptions = ``;
 
     travelList.forEach((value) => {
       listOptions += `
@@ -63,14 +63,17 @@ let suggestedEquipments = {
   },
   showInPage: function (category) {
     const htmlSuggestedEquipmentList = document.querySelector(
-        "#SuggestedEquipmentList"
-      ),
+      "#SuggestedEquipmentList"
+    ),
       equipmentItems = suggestedEquipments.list[category];
     let listOptions = ``;
 
     equipmentItems.forEach((item) => {
       listOptions += `
-      <input type="checkbox" ${item.isChecked}>${item.title}</input>`;
+      <div>
+      <input type="checkbox" ${item.isChecked}>${item.title}</input>
+      </div>
+      `;
       htmlSuggestedEquipmentList.innerHTML = listOptions;
     });
   },
@@ -90,9 +93,60 @@ htmlSelectTravelType.addEventListener(
 );
 
 // create lists
+travelType.newItem("", "");
 travelType.newItem("camping", "کمپینگ");
-travelType.newItem("kohnavardi", "");
-travelType.newItem("boomgardi", "");
-travelType.newItem("kavirgardi", "");
-
-// suggestedEquipments.newItem()
+travelType.newItem("kohnavardi", "کوهنوردی");
+travelType.newItem("boomgardi", "بومگردی");
+travelType.newItem("kavirnavadi", "کویرگردی");
+//camp
+suggestedEquipments.newItem("camping", "کیسه‌خواب")
+suggestedEquipments.newItem("camping", "زیر انداز")
+suggestedEquipments.newItem("camping", "پتو")
+suggestedEquipments.newItem("camping", "وسایل شخصی")
+suggestedEquipments.newItem("camping", "پاوربانک")
+suggestedEquipments.newItem("camping", "پیکنینک مسافرتی")
+suggestedEquipments.newItem("camping", "شارژر فندکی")
+suggestedEquipments.newItem("camping", "چادر")
+suggestedEquipments.newItem("camping", "وسایل پخت و پز مخصوص کمپ")
+suggestedEquipments.newItem("camping", "هدلامپ ")
+suggestedEquipments.newItem("camping", "جعبه‌ی کوچک کمک‌های اولیه ")
+suggestedEquipments.newItem("camping", "")
+suggestedEquipments.newItem("camping", "قمقمه/بطری آب ")
+//koh
+suggestedEquipments.newItem("kohnavardi", "کوله پشتی")
+suggestedEquipments.newItem("kohnavardi", "بوت یا کفش مخصوص کوهنوردی ")
+suggestedEquipments.newItem("kohnavardi", "جوراب‌های کوهپیمایی پشمی")
+suggestedEquipments.newItem("kohnavardi", "سوت")
+suggestedEquipments.newItem("kohnavardi", "کلاه آفتابی")
+suggestedEquipments.newItem("kohnavardi", "قمقمه/ بطری آب")
+suggestedEquipments.newItem("kohnavardi", "عصای کوهنوردی")
+suggestedEquipments.newItem("kohnavardi", "حداقل دو دست لباس")
+suggestedEquipments.newItem("kohnavardi", " عینک کوهنوردی")
+suggestedEquipments.newItem("kohnavardi", "اب و خوراکی")
+suggestedEquipments.newItem("kohnavardi", " وسایل بهداشتی")
+suggestedEquipments.newItem("kohnavardi", "حداقل دو دست لباس")
+suggestedEquipments.newItem("kohnavardi", "پاوربانک")
+//boom
+suggestedEquipments.newItem("boomgardi", "مدارک شناسایی و دفترچه بیمه")
+suggestedEquipments.newItem("boomgardi", "وسایل شخصی")
+suggestedEquipments.newItem("boomgardi", "لباس ")
+suggestedEquipments.newItem("boomgardi", "عینک و کلاه")
+suggestedEquipments.newItem("boomgardi", "ضد آفتاب ")
+suggestedEquipments.newItem("boomgardi", "پاور بانک")
+suggestedEquipments.newItem("boomgardi", " وسایل بهداشتی")
+suggestedEquipments.newItem("boomgardi", "پتوهای مسافرتی")
+//kavir
+suggestedEquipments.newItem("kavirnavadi", "کلمن و قمقمه آب")
+suggestedEquipments.newItem("kavirnavadi", "سایه‌بان پایه‌دار ")
+suggestedEquipments.newItem("kavirnavadi", "وسایل بهداشت شخصی ")
+suggestedEquipments.newItem("kavirnavadi", "زیرانداز و پتوی مسافرتی")
+suggestedEquipments.newItem("kavirnavadi", " کرم ضدآفتاب")
+suggestedEquipments.newItem("kavirnavadi", " اپلیکیشن‌های موقعیت‌ یابی افلاین و قطب نما ")
+suggestedEquipments.newItem("kavirnavadi", "چادر مناسب کویر ")
+suggestedEquipments.newItem("kavirnavadi", "حشره‌کش")
+suggestedEquipments.newItem("kavirnavadi", "  لباس تهیه شده از الیاف مصنوعی ")
+suggestedEquipments.newItem("kavirnavadi", "دستمال محافظ")
+suggestedEquipments.newItem("kavirnavadi", "صندل مخصوص پیاده‌روی در کویر")
+suggestedEquipments.newItem("kavirnavadi", "قطره چشم")
+suggestedEquipments.newItem("kavirnavadi", "ظرف نگهداری سوخت")
+suggestedEquipments.newItem("kavirnavadi", "دستمال")

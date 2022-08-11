@@ -91,29 +91,7 @@ li {
   padding: 7%;
 }
 
-.SuggestedEquipmentHistory ul {
-  display: grid;
-  grid-template-columns: 10fr 1fr 1fr 1fr;
-  display: flex;
 
-  flex-direction: column;
-}
-.SuggestedEquipmentHistory ul li {
-  display: flex;
-  align-items: baseline;
-  border: 1px dashed #ba3b46;
-  height: 40px;
-}
-.SuggestedEquipmentHistory ul li.hidden {
-  display: none;
-}
-.SuggestedEquipmentHistory ul span {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.hidden {
-  display: none;
-}
 
 input {
   outline: none;
@@ -135,6 +113,10 @@ option {
   font-size: 20px;
 }
 
+#typeList {
+  margin: 7%;
+}
+
 #save-type {
   border: 1px solid #050505;
   border-radius: 10px;
@@ -145,7 +127,7 @@ option {
   font-size: 0;
 }
 
-#transaction-type-div > button {
+#transaction-type-div>button {
   cursor: pointer;
   padding: 12px 0;
   font-size: 20px;
@@ -156,7 +138,7 @@ option {
   width: 50%;
 }
 
-#transaction-type-div > button:first-of-type {
+#transaction-type-div>button:first-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 100px;
 }
@@ -175,34 +157,63 @@ input[type="submit"]:hover {
   justify-content: center;
   flex-direction: row;
 }
-.col2 > div {
+
+.col2>div {
   width: 100%;
 }
 
-.SuggestedEquipment,
-.OptionalEquipment {
+#SuggestedEquipment,
+#OptionalEquipment {
   padding: 2%;
-  border: 1px solid #4242426b;
+  border: 1px solid #424242a9;
   border-radius: 10px;
   margin: 2%;
 }
 
-.SuggestedEquipment div:last-of-type,
-.OptionalEquipment div:last-of-type {
+#SuggestedEquipment div:last-of-type,
+#OptionalEquipment div:last-of-type {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.SuggestedEquipment input,
-.OptionalEquipment input {
+#SuggestedEquipmentlist input,
+#OptionalEquipmentList input {
   width: 2px;
   outline: none;
   width: 20px;
-  height: 20px;
+
   border: 1px dashed #161616;
   border-radius: 10px;
   background-color: #fff;
+}
+
+#SuggestedEquipmentList input {
+
+  text-align: right;
+  width: 40px;
+  font-size: 100px;
+  color: #050505;
+
+}
+
+i {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#SuggestedEquipmentList * {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
+#OptionalEquipmentList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #Optional {
@@ -256,12 +267,14 @@ input[type="submit"]:hover {
     width: 30%;
     margin: 5% 0;
   }
+
   .col2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .col2 > div {
+
+  .col2>div {
     width: auto;
   }
 }

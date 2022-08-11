@@ -177,19 +177,17 @@ input[type="submit"]:hover {
   flex-direction: column;
 }
 
-#SuggestedEquipmentlist input,
+
 #OptionalEquipmentList input {
   width: 2px;
   outline: none;
-  width: 20px;
-
+  width: 40px;
   border: 1px dashed #161616;
   border-radius: 10px;
   background-color: #fff;
 }
 
 #SuggestedEquipmentList input {
-
   text-align: right;
   width: 40px;
   font-size: 100px;
@@ -210,6 +208,9 @@ i {
 
 }
 
+#OptionalEquipmentList input {
+
+}
 #OptionalEquipmentList {
   display: flex;
   flex-direction: row;

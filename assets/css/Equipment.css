@@ -93,13 +93,41 @@ li {
 
 }
 
-#infoTravel {
+#Suggested {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     padding: 7%;
 
 }
+
+
+.SuggestedEquipmentHistory  ul {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr 1fr;
+  display: flex;
+ 
+  flex-direction: column;
+  
+}
+ .SuggestedEquipmentHistory ul  li {
+  display: flex;
+  align-items:baseline;
+  border: 1px dashed #ba3b46;
+  height: 40px;
+}
+.SuggestedEquipmentHistory ul li.hidden {
+  display: none;
+}
+ .SuggestedEquipmentHistory  ul span {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.hidden{
+    display:  none;
+}
+
+
 
 input {
     outline: none;
@@ -165,7 +193,16 @@ input[type="submit"]:hover {
 
 
 
-
+.col2{
+    border: 1px solid #161616;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+   
+}
+.col2>div{
+    width: 100%;
+}
 
 .SuggestedEquipment, .OptionalEquipment {
     padding: 2%;
@@ -256,5 +293,14 @@ input[type="submit"]:hover {
     #Optional input:last-of-type {
         width: 30%;
         margin: 5% 0;
+    }
+    .col2{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .col2 >div{
+        width: auto;
+        
     }
 }

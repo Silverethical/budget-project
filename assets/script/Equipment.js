@@ -1,21 +1,21 @@
 
 //array for suggestion item
-let SuggestedEquipmentArray = [['me'], ['uo'], ['me '], ['yo'], ["67"], ["56"], ["e34"]]
 
 
 //varible
-const clientchoice = document.querySelectorAll('#traveltype')
-const saveType = document.getElementById('save-type')
+const rating = document.querySelectorAll('#traveltype'),
+  form = document.getElementById('typeList'),
+  submitsuggestion = document.getElementById('save-type'),
+  elements = document.querySelectorAll('li')
+
 
 
 
 
 //eventlistner
-
-saveType.addEventListener('click', (e) => {
-  e.preventDefault()
-  suggested(clientchoice)
-
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  datalist(rating);
 })
 
 
@@ -28,10 +28,29 @@ saveType.addEventListener('click', (e) => {
 
 
 
-
 //function
-function suggested(typetavel) {
-  console.log(typetavel)
+function datalist(e) {
+  //console.log(e)
+  e = document.querySelector('#traveltype').value;
 
 
-}
+  [...elements].forEach((element) => {
+    // console.log(element)
+    if (e === '') {
+      element.classList.remove('hidden');
+    } else {
+      const rating = element.dataset.;
+      console.log(rating)
+      if (!rating || rating < g) {
+        element.classList.add('hidden');
+
+      } else {
+        element.classList.remove('hidden');
+        return 
+      }
+    }
+  });
+};
+
+
+

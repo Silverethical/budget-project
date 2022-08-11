@@ -29,58 +29,110 @@
             <div class="typeTravel">
 
                 <div id="transaction-type-div">
-                    <button id="Optional-btn">افزودن تجهیزات </button>
-                    <button id="Suggested-btn">تجهیزات پیشنهادی</button>
+                    <button id="Optional-btn">لیست وسایل مورد نیاز </button>
+                    <button id="Suggested-btn"> انتخاب مکان گردشگری</button>
                 </div>
                 <form action="" id="typeList">
-                    <div id="infoTravel">
+                    <div id="Suggested">
                         <div>
-                            <label for="traveltype">انتخاب نوع سفر</label>
+                            <label for="traveltype">انتخاب نوع سفر:</label>
                             <select id="traveltype">
-                                <option value="camping">کمپینگ</option>
-                                <option value="deserttour">کویرگردی</option>
-                                <option value="Ecotourismresidence"> اقامتگاه های بوم گردی </option>
+                                <option value="">Choose a rating</option>
+                                <option value="5">کمپینگ</option>
+                                <option value="4 2">بومگردی</option>
+                                <option value="3">کویر گردی</option>
+
                             </select>
                             </input>
                         </div>
                         <div>
                             <input type="submit" id="save-type">
                         </div>
+                    </form>
+                        <form action="">
                     </div>
+                    <hr>
+                    <div id="Optional">
+                        <input type="text" placeholder="  تجهیزات مورد نیاز خود را وارد کنید ... ">
+                        <input type="submit">
+                    </div>
+
+                </form>
+                <div class="col2">
                     <div class="SuggestedEquipment">
                         <div class="title">
                             <h2> تجهیزات پیشنهادی </h2>
                             <hr />
                         </div>
-                        <div>
-                            <span>-----<input type="checkbox" id="1" class="box"></input></span>
-                            <span>--------<input type="checkbox" id="1" class="box"></input></span>
-                            <span>-----------<input type="checkbox" id="1" class="box"></input></span>
-                            <span>------------<input type="checkbox" id="1" class="box"></input></span>
-                            <span>----------------<input type="checkbox" id="1" class="box"></input></span>
+
+                        <div class="SuggestedEquipmentHistory">
+                            <ul>
+                                <li data-rating="4">
+                                    <span><input type="checkbox" id="1" class="box">چادر مسافرتی
+                                        </input></span>
+                                </li>
+                                <li data-rating="2">
+                                    <span><input type="checkbox" id="1" class="box">لوازم بهداشتی
+                                        شخصی</input></span>
+                                </li>
+                                <li data-rating="3">
+                                    <span><input type="checkbox" id="1" class="box">زیرانداز</input></span>
+                                </li>
+                                <li data-rating="1">
+                                    <span><input type="checkbox" id="1" class="box">پاوربانک</input></span>
+                                </li>
+                                <li data-rating="4">
+                                    <span><input type="checkbox" id="1" class="box">پیکنیک
+                                        مسافرتی</input></span>
+                                </li>
+                                <li data-rating="1">
+                                    <span><input type="checkbox" id="1" class="box">وسایل مخضوض پخت
+                                        وپز</input></span>
+                                </li>
+                                <li data-rating="4">
+                                    <span><input type="checkbox" id="1" class="box"> جعبه کمک های
+                                        اولیه</input></span>
+                                </li>
+                                <li data-rating="4">
+                                    <span><input type="checkbox" id="1" class="box">مدارک شناسایی و
+                                        دفترچه بیمه</input></span>
+                                </li>
+                                <li data-rating="1">
+                                    <span><input type="checkbox" id="1" class="box">کوله
+                                        پشتی</input></span>
+                                </li>
+                                <li data-rating="5">
+                                    <span><input type="checkbox" id="1" class="box"></input></span>
+                                </li>
+                                <li data-rating="1">
+                                    <span><input type="checkbox" id="1" class="box"></input></span>
+                                </li>
+                                <li data-rating="2">
+                                    <span><input type="checkbox" id="1" class="box"></input></span>
+                                </li>
+                                <li data-rating="3">
+                                    <span><input type="checkbox" id="1" class="box"></input></span>
+                                </li>
+
+                            </ul>
                         </div>
-
                     </div>
-
-
                     <div class="OptionalEquipment">
                         <div class="title">
                             <h2> افزودن تجهیزات</h2>
                             <hr />
                         </div>
-
-                        <div id="Optional">
-                            <input type="text" placeholder="  تجهیزات مورد نیاز خود را وارد کنید ... ">
-                            <input type="submit">
-                        </div>
-                        <div>
+                        <div class="OptionalEquipmenthistory">
                             <span>-----------<input type="checkbox" id="1" class="box"></input></span>
                             <span>----------<input type="checkbox" id="1" class="box"></input></span>
                             <span>----------<input type="checkbox" id="1" class="box"></input></span>
                             <span>---------<input type="checkbox" id="1" class="box"></input></span>
                             <span>-----------<input type="checkbox" id="1" class="box"></input></span>
                         </div>
-                </form>
+                    </div>
+
+
+                </div>
             </div>
         </div>
 

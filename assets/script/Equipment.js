@@ -6,7 +6,7 @@
 const rating = document.querySelectorAll('#traveltype'),
   form = document.getElementById('typeList'),
   submitsuggestion = document.getElementById('save-type'),
-  elements = document.querySelectorAll('li')
+  elements = document.querySelectorAll('.SuggestedEquipmentHistory li')
 
 
 
@@ -15,7 +15,7 @@ const rating = document.querySelectorAll('#traveltype'),
 //eventlistner
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  datalist(rating);
+  datalist();
 })
 
 
@@ -29,19 +29,19 @@ form.addEventListener('submit', (e) => {
 
 
 //function
-function datalist(e) {
+function datalist() {
   //console.log(e)
-  e = document.querySelector('#traveltype').value;
+  const e = document.querySelector('#traveltype').value;
 
 
-  [...elements].forEach((element) => {
-    // console.log(element)
+  elements.forEach((element) => {
+   //console.log(element)
     if (e === '') {
       element.classList.remove('hidden');
     } else {
-      const rating = element.dataset.e;
-      console.log(rating)
-      if (!rating || rating < g) {
+      const rating = element.dataset.rating;
+     console.log('const',rating)
+      if (!rating || rating < e) {
         element.classList.add('hidden');
 
       } else {

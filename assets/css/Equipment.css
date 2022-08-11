@@ -1,306 +1,267 @@
 /* adding Persian font */
 @font-face {
-    font-family: "IranYekanWeb";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../font/iranyekanweblight.woff") format("woff");
-}
-
-
-@font-face {
-    font-family: "IranYekanWeb";
-    font-style: normal;
-    font-weight: 500;
-    src: url("../font/iranyekanwebregular.woff") format("woff");
+  font-family: "IranYekanWeb";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/iranyekanweblight.woff") format("woff");
 }
 
 @font-face {
-    font-family: "IranYekanWeb";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../font/iranyekanwebbold.woff") format("woff");
+  font-family: "IranYekanWeb";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/iranyekanwebregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "IranYekanWeb";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/iranyekanwebbold.woff") format("woff");
 }
 
 body {
-    background-color: #007bff82;
-    font-family: "IranYekanWeb", sans-serif;
-    font-size: 16px;
-    margin: 0%;
+  background-color: #007bff82;
+  font-family: "IranYekanWeb", sans-serif;
+  font-size: 16px;
+  margin: 0%;
 }
 
-
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .active {
-    background-color: #007bffc5 !important;
-    color: #fff !important;
+  background-color: #007bffc5 !important;
+  color: #fff !important;
 }
 
 .seperator {
-    height: 50px;
+  height: 50px;
 }
 
 .container1 {
-    margin: 0 auto;
-    max-width: 1400px;
-
-
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .container {
-    margin: 0% auto;
-    max-width: 1400px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 50px;
-
+  margin: 0% auto;
+  max-width: 1400px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 50px;
 }
 
-
 /*header */
-.headcol{
-    width: 100%;
-    background-color: #ffffff;
-    height:70px;
-    position: fixed;
-    box-shadow: 1px 5px 6px 0px #5f5f5f38;
-    
+.headcol {
+  width: 100%;
+  background-color: #ffffff;
+  height: 70px;
+  position: fixed;
+  box-shadow: 1px 5px 6px 0px #5f5f5f38;
 }
 
 .header {
-    display: flex;
-
+  display: flex;
 }
 
 .header ul {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 li {
-    cursor: pointer;
-    padding: 5px 10px;
-    margin: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px;
 }
 
 .header * {
-    text-decoration: none;
-    list-style: none;
-    color: rgb(42, 46, 46);
-
+  text-decoration: none;
+  list-style: none;
+  color: rgb(42, 46, 46);
 }
 
 #Suggested {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    padding: 7%;
-
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 7%;
 }
 
-
-.SuggestedEquipmentHistory  ul {
+.SuggestedEquipmentHistory ul {
   display: grid;
   grid-template-columns: 10fr 1fr 1fr 1fr;
   display: flex;
- 
+
   flex-direction: column;
-  
 }
- .SuggestedEquipmentHistory ul  li {
+.SuggestedEquipmentHistory ul li {
   display: flex;
-  align-items:baseline;
+  align-items: baseline;
   border: 1px dashed #ba3b46;
   height: 40px;
 }
 .SuggestedEquipmentHistory ul li.hidden {
   display: none;
 }
- .SuggestedEquipmentHistory  ul span {
+.SuggestedEquipmentHistory ul span {
   font-weight: bold;
   margin-bottom: 20px;
 }
-.hidden{
-    display:  none;
+.hidden {
+  display: none;
 }
 
-
-
 input {
-    outline: none;
-    width: 200px;
-    height: 40px;
-    border: 1px dashed #161616;
-    border-radius: 10px;
-    background-color: #fff;
-
+  outline: none;
+  width: 200px;
+  height: 40px;
+  border: 1px dashed #161616;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
 select {
-    border: 1px dashed #1616165d;
-    width: 200px;
-    height: 40px;
-
+  border: 1px dashed #1616165d;
+  width: 200px;
+  height: 40px;
 }
 
 option {
-    border: 1px dashed #1616165d;
-    font-size: 20px;
-
-
+  border: 1px dashed #1616165d;
+  font-size: 20px;
 }
 
 #save-type {
-    border: 1px solid #050505;
-    border-radius: 10px;
+  border: 1px solid #050505;
+  border-radius: 10px;
 }
 
 #transaction-type-div {
-    text-align: center;
-    font-size: 0;
+  text-align: center;
+  font-size: 0;
 }
 
-#transaction-type-div>button {
-    cursor: pointer;
-    padding: 12px 0;
-    font-size: 20px;
-    background-color: #fff;
-    border-top-left-radius: 100px;
-    border: none;
-    border-top: solid 1px #007bffc5;
-    width: 50%;
+#transaction-type-div > button {
+  cursor: pointer;
+  padding: 12px 0;
+  font-size: 20px;
+  background-color: #fff;
+  border-top-left-radius: 100px;
+  border: none;
+  border-top: solid 1px #007bffc5;
+  width: 50%;
 }
 
-#transaction-type-div>button:first-of-type {
-    border-top-left-radius: 0;
-    border-top-right-radius: 100px;
+#transaction-type-div > button:first-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 100px;
 }
-
-
 
 input:hover {
-    box-shadow: inset 1px 5px 6px 0px #585a5831;
+  box-shadow: inset 1px 5px 6px 0px #585a5831;
 }
 
 input[type="submit"]:hover {
-    box-shadow: 1px 5px 6px 0px #585a5856;
+  box-shadow: 1px 5px 6px 0px #585a5856;
 }
 
-
-
-
-
-.col2{
-    border: 1px solid #161616;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-   
+.col2 {
+  border: 1px solid #161616;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
-.col2>div{
-    width: 100%;
+.col2 > div {
+  width: 100%;
 }
 
-.SuggestedEquipment, .OptionalEquipment {
-    padding: 2%;
-    border: 1px solid #4242426b;
-    border-radius: 10px;
-    margin: 2%;
-
+.SuggestedEquipment,
+.OptionalEquipment {
+  padding: 2%;
+  border: 1px solid #4242426b;
+  border-radius: 10px;
+  margin: 2%;
 }
 
-.SuggestedEquipment div:last-of-type, .OptionalEquipment div:last-of-type {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.SuggestedEquipment div:last-of-type,
+.OptionalEquipment div:last-of-type {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.SuggestedEquipment input, .OptionalEquipment input {
-    width: 2px;
-    outline: none;
-    width: 20px;
-    height: 20px;
-    border: 1px dashed #161616;
-    border-radius: 10px;
-    background-color: #fff;
+.SuggestedEquipment input,
+.OptionalEquipment input {
+  width: 2px;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  border: 1px dashed #161616;
+  border-radius: 10px;
+  background-color: #fff;
 }
-
 
 #Optional {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 5% 7%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5% 7%;
 }
 
 #Optional input {
-    outline: none;
-    width: 200px;
-    height: 40px;
-    border: 1px dashed #161616;
-    border-radius: 10px;
-    background-color: #fff;
-
+  outline: none;
+  width: 200px;
+  height: 40px;
+  border: 1px dashed #161616;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
 #Optional input:last-of-type {
-    border: 1px solid #050505;
-    border-radius: 10px;
+  border: 1px solid #050505;
+  border-radius: 10px;
 }
 
+@media only screen and (max-width: 900px) {
+  #infoTravel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
+  #infoTravel div:first-of-type {
+    margin: 5% 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
+  #infoTravel div:last-of-type input {
+    width: 30%;
+  }
 
+  select {
+    width: 50%;
+  }
 
+  #Optional {
+    display: flex;
+    flex-direction: column;
+  }
 
-
-
-
-@media only screen and (max-width:900px) {
-    #infoTravel {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-    #infoTravel div:first-of-type {
-        margin: 5% 0;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-    #infoTravel div:last-of-type input {
-        width: 30%;
-    }
-
-
-
-
-    select {
-        width: 50%;
-    }
-
-    #Optional {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #Optional input:last-of-type {
-        width: 30%;
-        margin: 5% 0;
-    }
-    .col2{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .col2 >div{
-        width: auto;
-        
-    }
+  #Optional input:last-of-type {
+    width: 30%;
+    margin: 5% 0;
+  }
+  .col2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .col2 > div {
+    width: auto;
+  }
 }

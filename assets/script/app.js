@@ -95,7 +95,7 @@ function addIncome() {
     createIncomeItem(htmlIncomeAmount);
     showUserBudget();
     showExpenseForm();
-    saveIncomeHistory(htmlIncomeAmount)
+    saveIncomeHistory(htmlIncomeAmount);
   } else {
     alert("error");
   }
@@ -203,7 +203,6 @@ function removeIncomeItem(target) {
   for (let i = 0; i < incomeList.length; i++) {
     incomeList[i].setAttribute("id", i);
   }
-
 }
 
 function saveExpenseHistory(name, amount, price) {

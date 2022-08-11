@@ -39,7 +39,7 @@ function datalist(e) {
     if (e === '') {
       element.classList.remove('hidden');
     } else {
-      const rating = element.dataset.;
+      const rating = element.dataset.e;
       console.log(rating)
       if (!rating || rating < g) {
         element.classList.add('hidden');

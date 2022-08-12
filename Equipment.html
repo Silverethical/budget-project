@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>budget tracker</title>
-    <link rel="stylesheet" href="css/Equipment.css">
+    <link rel="stylesheet" href="./assets/css/Equipment.css">
 </head>
 
 <body>
@@ -14,9 +14,8 @@
         <div class="container1">
             <div class="header">
                 <ul>
-                    <li><a href="../index.html"> پلنر بودجه </a></li>
-                    <li><a href="Equipment.html"> تجهیزات</a> </li>
-                    <li></li>
+                    <li><a href="./index.html"> پلنر بودجه </a></li>
+                    <li><a href="./Equipment.html"> تجهیزات</a> </li>
                 </ul>
             </div>
         </div>
@@ -29,24 +28,23 @@
             <div class="typeTravel">
 
                 <div id="transaction-type-div">
-                    <button id="Optional-btn">لیست وسایل مورد نیاز </button>
-                    <button id="Suggested-btn"> انتخاب مکان گردشگری</button>
+                    <button id="suggested-tools-btn" class="active">لیست وسایل مورد نیاز </button>
+                    <button id="suggested-places-btn"> انتخاب مکان گردشگری</button>
                 </div>
-                <form action="" id="typeList">
-
-                    <label for="traveltype">انتخاب نوع سفر:</label>
-                    <select id="traveltype"></select>
-                    </input>
             </div>
-            </form>
         </div>
-        <hr>
-        <form id="Optional">
-            <input type="text" id="textoptional" placeholder="وسایل مورد نیاز خود را به لیست اضافه کنید ">
-            <input type="submit" id="option-btn">
-        </form>
 
-        </form>
+        <div id="forms-div">
+            <form action="#" id="typeList">
+                <label for="traveltype">انتخاب نوع سفر:</label>
+                <select id="traveltype"></select>
+            </form>
+            <form action="#" id="Optional">
+                <input type="text" id="textoptional" placeholder="افزودن وسیله مورد نیاز به لیست ">
+                <input type="submit" id="option-btn" value="ثبت">
+            </form>    
+        </div>
+
         <div class="col2">
             <div id="SuggestedEquipment">
                 <div class="title">
@@ -63,7 +61,7 @@
                 </div>
                 <div id="OptionalEquipmentList">
                     <i>
-                        <input type="checkbox" id="1" class="box">--------</input><span>X</span>
+                        <input type="checkbox" id="1" class="box">--------</input><span><img src="./assets/img/remove-icon.png" alt="remove-icon"></span>
                     </i>
 
                 </div>
@@ -72,12 +70,8 @@
 
         </div>
     </div>
-    </div>
 
-
-    </div>
-
-    <script src="script/Equipment.js"></script>
+    <script src="./assets/script/Equipment.js"></script>
 </body>
 
 </html>

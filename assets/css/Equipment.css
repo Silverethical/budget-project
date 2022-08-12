@@ -27,6 +27,10 @@ body {
   margin: 0%;
 }
 
+* {
+  font-family: inherit;
+}
+
 .hidden {
   display: none !important;
 }
@@ -91,8 +95,6 @@ li {
   padding: 7%;
 }
 
-
-
 input {
   outline: none;
   width: 200px;
@@ -106,15 +108,12 @@ select {
   border: 1px dashed #1616165d;
   width: 200px;
   height: 40px;
+  outline: none;
 }
 
 option {
   border: 1px dashed #1616165d;
   font-size: 20px;
-}
-
-#typeList {
-  margin: 7%;
 }
 
 #save-type {
@@ -127,7 +126,7 @@ option {
   font-size: 0;
 }
 
-#transaction-type-div>button {
+#transaction-type-div > button {
   cursor: pointer;
   padding: 12px 0;
   font-size: 20px;
@@ -138,7 +137,7 @@ option {
   width: 50%;
 }
 
-#transaction-type-div>button:first-of-type {
+#transaction-type-div > button:first-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 100px;
 }
@@ -158,8 +157,15 @@ input[type="submit"]:hover {
   flex-direction: row;
 }
 
-.col2>div {
+.col2 > div {
   width: 100%;
+}
+
+#forms-div {
+  min-height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #SuggestedEquipment,
@@ -170,13 +176,11 @@ input[type="submit"]:hover {
   margin: 2%;
 }
 
-#SuggestedEquipment div:last-of-type,
 #OptionalEquipment div:last-of-type {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
 
 #OptionalEquipmentList input {
   width: 2px;
@@ -192,25 +196,18 @@ input[type="submit"]:hover {
   width: 40px;
   font-size: 100px;
   color: #050505;
-
 }
 
 i {
   display: flex;
   justify-content: space-between;
-
 }
 
-#SuggestedEquipmentList * {
+#SuggestedEquipmentList > div {
   display: flex;
   align-items: center;
-  text-align: center;
-
 }
 
-#OptionalEquipmentList input {
-
-}
 #OptionalEquipmentList {
   display: flex;
   flex-direction: row;
@@ -218,23 +215,26 @@ i {
 }
 
 #Optional {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 5% 7%;
+  /* display: flex;
+  justify-content: space-evenly; */
+  margin: 30px 0;
 }
 
-#Optional input {
+#Optional > input {
   outline: none;
   width: 200px;
   height: 40px;
   border: 1px dashed #161616;
   border-radius: 10px;
   background-color: #fff;
+  padding: 4px 10px;
 }
 
 #Optional input:last-of-type {
+  height: 50px;
   border: 1px solid #050505;
   border-radius: 10px;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -275,7 +275,7 @@ i {
     flex-direction: column;
   }
 
-  .col2>div {
+  .col2 > div {
     width: auto;
   }
 }

@@ -2,15 +2,13 @@
 
 // variables
 let expenseHistory = [],
-  incomeHistory = [],
-  htmlRemoveBtn = document.querySelector("#remove-btn"),
-  htmlIncmoeBtn = document.querySelector("#income-btn"),
+  incomeHistory = [];
+
+const htmlIncmoeBtn = document.querySelector("#income-btn"),
   htmlExpenseBtn = document.querySelector("#expense-btn"),
   htmlIncomeForm = document.querySelector("#income-form"),
   htmlExpenseForm = document.querySelector("#expense-form"),
-  htmlIncomeSubmit = document.querySelector("#income-form > #submit-btn"),
   htmlCurrentBudget = document.querySelector("#current-budget"),
-  htmlExpenseSubmit = document.querySelector("#expense-form #submit-btn"),
   htmlExpenseHistory = document.querySelector("#expense-history"),
   htmlIncomeHistory = document.querySelector("#income-history");
 
@@ -18,21 +16,23 @@ let expenseHistory = [],
 document.addEventListener("DOMContentLoaded", appInit);
 htmlIncmoeBtn.addEventListener("click", showIncomeForm);
 htmlExpenseBtn.addEventListener("click", showExpenseForm);
-htmlIncomeSubmit.addEventListener("click", (e) => {
+htmlIncomeForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addIncome();
 });
-htmlExpenseSubmit.addEventListener("click", (e) => {
+htmlExpenseForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addExpense();
 });
 
+// do these at the start
 function appInit() {
   checkLocalStorage();
-  activateForm();
+  noBudgetActivateIncome();
   showUserBudget();
 }
 
+// check local storage if this is the first run
 function checkLocalStorage() {
   if (!!localStorage.getItem("expenseHistory")) {
     expenseHistory = JSON.parse(localStorage.getItem("expenseHistory"));
@@ -55,31 +55,43 @@ function checkLocalStorage() {
   }
 }
 
+// activate income form
 function showIncomeForm() {
+  hideExpenseForm();
   htmlIncmoeBtn.classList.add("active");
   htmlIncomeForm.classList.remove("hidden");
-  htmlExpenseBtn.classList.remove("active");
-  htmlExpenseForm.classList.add("hidden");
 }
 
-function showExpenseForm() {
-  htmlExpenseBtn.classList.add("active");
-  htmlExpenseForm.classList.remove("hidden");
+// de-activate income form
+function hideIncomeForm() {
   htmlIncmoeBtn.classList.remove("active");
   htmlIncomeForm.classList.add("hidden");
 }
 
-function activateForm() {
+// activate expense form
+function showExpenseForm() {
+  hideIncomeForm();
+  htmlExpenseBtn.classList.add("active");
+  htmlExpenseForm.classList.remove("hidden");
+}
+
+// de-activate expense form
+function hideExpenseForm() {
+  htmlExpenseBtn.classList.remove("active");
+  htmlExpenseForm.classList.add("hidden");
+}
+
+// activate income form if there is no budget
+function noBudgetActivateIncome() {
   let userBudget = Number(localStorage.getItem("userBudget"));
-  if (!!userBudget) {
-    htmlExpenseBtn.classList.add("active");
-    htmlExpenseForm.classList.remove("hidden");
+  if (!userBudget) {
+    showIncomeForm();
   } else {
-    htmlIncmoeBtn.classList.add("active");
-    htmlIncomeForm.classList.remove("hidden");
+    showExpenseForm();
   }
 }
 
+// add income to local storage and show in page
 function addIncome() {
   let userBudget = Number(localStorage.getItem("userBudget")),
     htmlIncomeAmount = Number(
@@ -96,11 +108,14 @@ function addIncome() {
     showUserBudget();
     showExpenseForm();
     saveIncomeHistory(htmlIncomeAmount);
+
+    htmlIncomeForm.reset();
   } else {
     alert("error");
   }
 }
 
+// get user budget from local storage and show it in page
 function showUserBudget() {
   let userBudget = Number(localStorage.getItem("userBudget"));
   if (!userBudget) {
@@ -110,6 +125,7 @@ function showUserBudget() {
   }
 }
 
+// add income to local storage and show in page
 function addExpense() {
   let htmlExpenseTransactionName = document.querySelector(
       "#expense-form #transaction-name"
@@ -147,15 +163,18 @@ function addExpense() {
         htmlExpenseTransactionAmount,
         htmlExpenseTransactionPrice
       );
+
+      htmlExpenseForm.reset();
     }
   }
 }
 
+// create html element for expense
 function createExpenseItem(name, amount, price) {
   const itemDiv = document.createElement("div"),
     removeDiv = document.createElement("div");
 
-  removeDiv.innerHTML = `<span id="remove-btn" onclick="removeExpenseItem(this.parentElement)">x</span>`;
+  removeDiv.innerHTML = `<span id="remove-btn" onclick="removeExpenseItem(this.parentElement)"><img src="./assets/img/remove-icon.png" alt="remove-icon"></span>`;
   itemDiv.innerHTML = `
       <span>${name}</span>
       <span>تعداد ${amount}</span>
@@ -166,12 +185,13 @@ function createExpenseItem(name, amount, price) {
   htmlExpenseHistory.appendChild(itemDiv);
 }
 
+// create html element for income
 function createIncomeItem(price) {
   const itemDiv = document.createElement("div"),
     removeDiv = document.createElement("div"),
     shamsiDate = new Date().toLocaleDateString("fa-IR-u-nu-latn");
 
-  removeDiv.innerHTML = `<span id="remove-btn" onclick="removeIncomeItem(this.parentElement)">x</span>`;
+  removeDiv.innerHTML = `<span id="remove-btn" onclick="removeIncomeItem(this.parentElement)"><img src="./assets/img/remove-icon.png" alt="remove-icon"></span>`;
   itemDiv.innerHTML = `
       <span>${price} ریال</span>
       <span>${shamsiDate}</span>
@@ -182,34 +202,40 @@ function createIncomeItem(price) {
   htmlIncomeHistory.appendChild(itemDiv);
 }
 
+// remove expense item from page and local storage
 function removeExpenseItem(target) {
   target.parentElement.remove();
   expenseHistory.splice(target.parentElement.id, 1);
   localStorage.setItem("expenseHistory", JSON.stringify(expenseHistory));
 
+  // adjust the IDs of items
   const expenseList = document.querySelectorAll("#expense-history > div");
   for (let i = 0; i < expenseList.length; i++) {
     expenseList[i].setAttribute("id", i);
   }
 }
 
+// remove income item from page and local storage
 function removeIncomeItem(target) {
   target.parentElement.remove();
 
   incomeHistory.splice(target.parentElement.id, 1);
   localStorage.setItem("incomeHistory", JSON.stringify(incomeHistory));
 
+  // adjust the IDs of items
   const incomeList = document.querySelectorAll("#income-history > div");
   for (let i = 0; i < incomeList.length; i++) {
     incomeList[i].setAttribute("id", i);
   }
 }
 
+// save expense items to local storage
 function saveExpenseHistory(name, amount, price) {
   expenseHistory.push([name, amount, price]);
   localStorage.setItem("expenseHistory", JSON.stringify(expenseHistory));
 }
 
+// save income items to local storage
 function saveIncomeHistory(price) {
   const shamsiDate = new Date().toLocaleDateString("fa-IR-u-nu-latn");
   incomeHistory.push([price, shamsiDate]);

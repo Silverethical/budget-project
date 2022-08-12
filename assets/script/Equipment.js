@@ -63,8 +63,8 @@ let suggestedEquipments = {
   },
   showInPage: function (category) {
     const htmlSuggestedEquipmentList = document.querySelector(
-        "#SuggestedEquipmentList"
-      ),
+      "#SuggestedEquipmentList"
+    ),
       equipmentItems = suggestedEquipments.list[category];
     let listOptions = ``;
 
@@ -157,3 +157,48 @@ suggestedEquipments.newItem("kavirnavadi", "صندل مخصوص پیاده‌ر�
 suggestedEquipments.newItem("kavirnavadi", "قطره چشم");
 suggestedEquipments.newItem("kavirnavadi", "ظرف نگهداری سوخت");
 suggestedEquipments.newItem("kavirnavadi", "دستمال");
+
+
+
+//Optional
+const Optionalform = document.querySelector('#Optional'),
+  textoptional = document.querySelector('#textoptional'),
+  OptionalEquipmentList = document.querySelector("#OptionalEquipmentList"),
+  removeOptionalitem = document.querySelector("#removeOptionalitem")
+
+  ;
+//eventlistner
+
+Optionalform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const textOpti = textoptional.value;
+  if (!textOpti) {
+    alert("error");
+    return;
+  } else {
+    //create  add new item
+    submit();
+
+  }
+})
+
+
+//function
+//add new item optionallist
+function submit() {
+  const textopti = document.querySelector('#textoptional').value,
+    OptionalEquipmentList = document.querySelector("#OptionalEquipmentList");
+  const divitem = document.createElement("div");
+  divitem.innerHTML = `
+  <i>
+       <input type="checkbox" >${textopti}</input><span  onclick="removeitemop(this.parentElement)"  ><img src="./assets/img/remove-icon.png" alt="remove-icon"></span>
+   </i>`;
+  OptionalEquipmentList.appendChild(divitem);
+
+}
+
+//remove
+
+function removeitemop(e) {
+  e.remove();
+}
